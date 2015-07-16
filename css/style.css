@@ -1,0 +1,98 @@
+body {
+	font-family: "Helvetica Neue", Arial, Verdana, "Nimbus Sans L", sans-serif;
+	background-color: lavenderblush;
+}
+
+
+
+.header {
+	text-align: center;
+	color: black;
+	border: groove;
+	background-color: coral;
+	border-color: black;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	width: 60%;
+}
+h2 {
+	font-size: 42px;
+}
+h3 {
+	font-size: 24px;
+
+}
+
+
+img {
+	border: solid 1px;
+
+}
+
+.persona {
+	border: dashed;
+	border-radius: 20px;
+	padding: 10px 50px 20px ;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: antiquewhite;
+	margin-right: 20px;
+}
+.info {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+	border: dashed;
+	padding: 10px 50px 0 ;
+	border-radius: 20px;
+	background-color: aquamarine;
+}
+
+.header {
+	text-align: center;
+	color: black;
+	border: groove;
+	background-color: coral;
+	border-color: black;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	width: 60%;
+}
+
+.usecase {
+	text-align: center;
+	color: black;
+	border: groove;
+	background-color: blue;
+	border-color: black;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	width: 80%;
+}
+.user {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+	border: dashed;
+	padding: 10px 50px 0 ;
+	border-radius: 20px;
+	background-color: darksalmon;
+
+}
+.steps {
+	display: inline-block;
+	width: 40%;
+	border: dashed;
+	padding: 10px 50px 0 ;
+	border-radius: 20px;
+	background-color: aquamarine;
+}
+
+ul {
+	padding: 10px 50px 0 ;
+	margin-left: 40px;
+}
