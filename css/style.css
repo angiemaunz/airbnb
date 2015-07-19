@@ -1,16 +1,13 @@
 body {
 	font-family: "Helvetica Neue", Arial, Verdana, "Nimbus Sans L", sans-serif;
 	background-color: lavenderblush;
+	border: double;
 }
-
-
 
 .header {
 	text-align: center;
 	color: black;
-	border: groove;
-	background-color: coral;
-	border-color: black;
+	border: solid 30px #000;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 	border-radius: 20px;
@@ -21,31 +18,33 @@ h2 {
 }
 h3 {
 	font-size: 24px;
-
 }
 
 
 img {
-	border: solid 1px;
-
+	border: solid 5px #808080;
+	float: right;
+	display: inline-flex;
 }
 
 .persona {
-	border: dashed;
+	clear: both;
+	border: solid 10px #080808;
 	border-radius: 20px;
-	padding: 10px 50px 20px ;
+	padding: 5px 20px 20px ;
 	width: 30%;
+	flex-grow: 1;
 	display: inline-block;
 	vertical-align: top;
 	background-color: antiquewhite;
-	margin-right: 20px;
+	margin: 10px 5px 20px;
 }
 .info {
 	display: inline-block;
 	vertical-align: top;
 	width: 40%;
 	border: dashed;
-	padding: 10px 50px 0 ;
+	padding: 5px 10px 0 ;
 	border-radius: 20px;
 	background-color: aquamarine;
 }
@@ -57,7 +56,7 @@ img {
 	background-color: coral;
 	border-color: black;
 	padding-bottom: 10px;
-	margin-bottom: 20px;
+	margin-top: 20px;
 	border-radius: 20px;
 	width: 60%;
 }
@@ -76,8 +75,8 @@ img {
 .user {
 	display: inline-block;
 	vertical-align: top;
-	width: 40%;
-	border: dashed;
+	width: 30%;
+	border: solid 10px black;
 	padding: 10px 50px 0 ;
 	border-radius: 20px;
 	background-color: darksalmon;
@@ -85,14 +84,28 @@ img {
 }
 .steps {
 	display: inline-block;
+	vertical-align: top;
 	width: 40%;
 	border: dashed;
 	padding: 10px 50px 0 ;
-	border-radius: 20px;
+	border-radius: 30px;
 	background-color: aquamarine;
 }
 
 ul {
-	padding: 10px 50px 0 ;
+	padding: 10px 15px 0 ;
 	margin-left: 40px;
+	width: 50%;
+	display: inline;
+}
+.diagram img {
+	margin: 10px 20px 15px 5px;
+	border: solid 2px blue;
+	width: 50%;
+	float: right;
+}
+
+.sql {
+	border: double;
+	width: 30%;
 }

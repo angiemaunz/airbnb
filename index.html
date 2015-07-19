@@ -5,86 +5,121 @@
 		<title>AirBnB Data Design Project</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
+
 	<body>
 		<div class="header">
 			<h1>AirBnB Data Design Project</h1>
 		</div>
 
-<div class="container">
+		<div class="container">
 
-		<div class="persona">
-			<h2>Persona: Leah</h2>
-			<img src="images/airbnbpersonal.jpeg" alt="retired lady counting money">
-		</div>
-	<div class="info">
-		<h3>relevant characteristics:</h3>
-		<ul>
-			<li>widowed, single, divorced, retired</li>
-			<li>home paid for</li>
-			<li>all kids grown up and moved out</li>
-			<li>extra bedrooms / baths</li>
-			<li>plenty of time available</li>
-			<li>tablet user or home computer</li>
-			<li>travels locally to visit kids and community events</li>
-			</ul>
-		</div>
-
-	<div class="header">
-		<h1>Use Cases</h1>
-	</div>
-		<div class="user">
-			<h3>Goal:</h3>
-			<p>extra cash & enjoy the interaction with guests, provide nice meals, social interaction</p>
+			<div class="persona">
+				<h2>Persona: Leah</h2>
+				<img src="images/airbnbpersonal.jpeg" alt="retired lady counting money">
 			</div>
-	<div class="steps">
-			<h4>Sign-up for an airbnb hosting account so Leah can add her listing(s):</h2>
-				<ol><li>name</li>
-					<li>email</li>
-					<li>password</li>
-					<li>age</li>
-				</ol>
 
+			<div class="info">
+			<h3>relevant characteristics:</h3>
+			<ul>
+				<li>widowed, single, divorced, retired</li>
+				<li>home paid for</li>
+				<li>all kids grown up and moved out</li>
+				<li>extra bedrooms / baths</li>
+				<li>plenty of time available</li>
+				<li>tablet user or home computer</li>
+				<li>travels locally to visit kids and community events</li>
+				</ul>
+			</div>
 
-			<h4>Create a hosting profile</h2>
-				<ol>
-			<li>type of house or room or ??</li>
-			<li>location</li>
-			<li>price</li>
-			<li>dates_available</li>
-				</ol>
-	</div>
+			<div class="header">
+				<h1>Use Cases</h1>
+			</div>
+			<div class="user">
+				<h3>Goal:</h3>
+				<p>extra cash & enjoy the interaction with guests, provide nice meals, social interaction</p>
+			</div>
 
-	<div class="user">
-		<h3>Goal:</h3>
-		<p>Host wants to view their upcoming reservations</p>
-	</div>
-	<div class="steps">
-		<h4>Steps to accomplish this:</h2>
-			<ol><li>login to their account.</li>
-				<li>click the dropdown arrow to the right of their profile picture in top right hand corner of their home page.</li>
-				<li>From the dropdown list, select “Your Reservations”.</li>
-			</ol>
-	</div>
+			<div class="steps">
+					<h4>Sign-up for an airbnb hosting account so Leah can add her listing(s):</h4>
+						<ol>
+							<li>name</li>
+							<li>email</li>
+							<li>password</li>
+							<li>age</li>
+						</ol>
 
-	<div class="user">
-		<h3>Goal:</h3>
-		<p>A user needs to find out how to cancel an existing booking.</p>
-	</div>
-	<div class="steps">
-		<h4>Steps to accomplish this:</h2>
-			<ol>
-				<li>Login into their airbnb hosting account</li>
-				<li>Click on the dropdown arrow beside “help” in upper right hand corner.</li>
-				<li>From the dropdown menu, select “How do I cancel a reservation as a host?</li>
-			</ol>
+					<h4>Create a hosting profile</h4>
+						<ol>
+							<li>type of house or room or ??</li>
+							<li>location</li>
+							<li>price</li>
+							<li>dates_available</li>
+						</ol>
+			</div>
 
-</div>
+			<div class="user">
+				<h3>Goal:</h3>
+				<p>Host wants to view their upcoming reservations</p>
+			</div>
+			<div class="steps">
+				<h4>Steps to accomplish this:</h4>
+					<ol><li>login to their account.</li>
+						<li>click the dropdown arrow to the right of their profile picture in top right hand corner of their home page.</li>
+						<li>From the dropdown list, select “Your Reservations”.</li>
+					</ol>
+			</div>
 
+			<div class="user">
+				<h3>Goal:</h3>
+				<p>A user needs to find out how to cancel an existing booking.</p>
+			</div>
+
+			<div class="steps">
+				<h4>Steps to accomplish this:</h4>
+					<ol>
+						<li>Login into their airbnb hosting account</li>
+						<li>Click on the dropdown arrow beside “help” in upper right hand corner.</li>
+						<li>From the dropdown menu, select “How do I cancel a reservation as a host?</li>
+					</ol>
+			</div>
+
+			<div class="diagram">
+				<img src="images/erdairbnb.png" alt="data design layout">
+			</div>
 		</div>
 
-</div>
+<div class="sql">
+	<h4>DROP TABLE IF user (</h4>
+	<h4>CREATE TABLE user (</h4>
+	<h4>CREATE TABLE user (</h4>
 
-	</div>
+			<h4>CREATE TABLE user (</h4>
+			<p>userId INT UNSIGNED AUTO_INCREMENT NOT NULL,</p>
+				<p>name VARCHAR(128) NOT NULL,</p>
+				<p>email VARCHAR(128) NOT NULL,</p>
+				<p>password,</p>
+				<p>>birthday,</p>
+				<p>PRIMARY KEY(userId)</p>
+			<p>);</p>
+
+			<h4>CREATE TABLE listing (</h4>
+			<p>listingID INT UNSIGNED AUTO_INCREMENT NOT NULL,</p>
+			<p>listingType VARCHAR(128) NOT NULL,</p>
+			<p>location VARCHAR(128) NOT NULL,</p>
+			<p>price,</p>
+			<p>>datesAvailable,</p>
+			<p>description </p>
+			<p>PRIMARY KEY(listingId)</p>
+			<p>);</p>
+
+
+			<h4>CREATE TABLE reservation (</h4>
+			<p>userId,</p>
+			<p>listingID,</p>
+			<p>dateWanted DATETIME NOT NULL,</p>
+			<p>PRIMARY KEY(reservationId)</p>
+			<p>);</p>
+</div>
 
 
 
