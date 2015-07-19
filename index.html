@@ -89,28 +89,40 @@
 		</div>
 
 <div class="sql">
-	<h4>DROP TABLE IF user (</h4>
-	<h4>CREATE TABLE user (</h4>
-	<h4>CREATE TABLE user (</h4>
+	<h4>DROP TABLE IF EXISTS reservation;</h4>
+	<h4>DROP TABLE IF EXISTS listing;</h4>
+	<h4>DROP TABLE IF EXISTS member;</h4>
+	<hr>
 
-			<h4>CREATE TABLE user (</h4>
-			<p>userId INT UNSIGNED AUTO_INCREMENT NOT NULL,</p>
-				<p>name VARCHAR(128) NOT NULL,</p>
-				<p>email VARCHAR(128) NOT NULL,</p>
-				<p>password,</p>
-				<p>>birthday,</p>
+			<h4>CREATE TABLE member (</h4>
+				<p>userId INT UNSIGNED AUTO_INCREMENT NOT NULL,</p>
+				<p>loginName VARCHAR(20)
+				<p>firstName VARCHAR(30) NOT NULL,</p>
+				<p>lastName VARCHAR(30) NOT NULL,</p>
+				<p>createDate DATE</p>
+				<p>email VARCHAR(50) NOT NULL,</p>
+				<p>password CHAR(255) NOT NULL ,</p>
+				<p>>birthday DATETIME NOT NULL,</p>
 				<p>PRIMARY KEY(userId)</p>
-			<p>);</p>
-
+				<p>);</p>
+	<hr>
+	<img src="images/membertable.png" alt="mysql member table">
+	<hr>
 			<h4>CREATE TABLE listing (</h4>
-			<p>listingID INT UNSIGNED AUTO_INCREMENT NOT NULL,</p>
-			<p>listingType VARCHAR(128) NOT NULL,</p>
-			<p>location VARCHAR(128) NOT NULL,</p>
-			<p>price,</p>
-			<p>>datesAvailable,</p>
-			<p>description </p>
-			<p>PRIMARY KEY(listingId)</p>
-			<p>);</p>
+				<p>listingID INT UNSIGNED AUTO_INCREMENT NOT NULL,</p>
+				<p>listingType VARCHAR(60) NOT NULL,</p>
+				<p>street VARCHAR(50) NOT NULL,</p>
+				<p>city VARCHAR(50),</p>
+				<p>state CHAR(2) NOT</p>
+				<p>zip VARCHAR(10) NOT NULL</p>
+				<p>price DECIMAL(6,0) NOT NULL,</p>
+				<p>>datesAvailable DATETIME,</p>
+				<p>description VARCHAR(255),</p>
+				<p>image VARCHAR(15)</p>
+				<p>phone VARCHAR(15),</p>
+				<p>PRIMARY KEY(listingId)</p>
+				<p>);</p>
+	<hr>
 
 
 			<h4>CREATE TABLE reservation (</h4>
