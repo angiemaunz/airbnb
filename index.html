@@ -29,7 +29,7 @@
 				</ul>
 			</div>
 
-			<div class="header">
+			<div class="uses">
 				<h1>Use Cases</h1>
 			</div>
 			<div class="user">
@@ -92,21 +92,20 @@
 					<h4>DROP TABLE IF EXISTS member;</h4>
 					<hr>
 					<hr>
+						<img src="images/airbnbtables.png" alt="mysql member table">
+					<hr>
 
-						<img src="images/membertable.png" alt="mysql member table">
-					<hr>
-					<hr>
-						<img src="images/listingtable.png" alt="mysql member table">
-
-					<hr>
 					<hr>
 
 							<h4>CREATE TABLE reservation (</h4>
-							<p>reservationID INT AUTO_INCREMENT UNSIGNED NOT NULL,
-							</p><p>userId INT NOT NULL,</p>
+							<p>reservationID INT AUTO_INCREMENT UNSIGNED NOT NULL,</p>
+							<p>userID INT NOT NULL,</p>
 							<p>listingID INT NOT NULL,</p>
 							<p>dateWanted DATETIME NOT NULL,</p>
-							<p>PRIMARY KEY(reservationId)</p>
+							<p>PRIMARY KEY(reservationId),</p>
+							<p><INDEX ,</p>
+							<p>FOREIGN KEY(userID) REFERENCES(member),</p>
+							<p>FOREIGN KEY(listingID) REFERENCES(listing)</p>
 							<p>);</p>
 				</div>
 </div>
