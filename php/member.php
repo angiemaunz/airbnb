@@ -58,12 +58,61 @@ class Member {
 	}
 
 	/**
+	 * mutator method for member id
+	 *
+	 * @param int $newMemberId new value of member id
+	 * @throws InvalidArgumentException if $newMemberId is not an integer or not positive
+	 * @throws RangeException if $newMemberId is not positive
+	 * @param int $newMemberId
+	 **/
+	public function setMemberId($newMemberId) {
+		// verify the member id is valid
+		$newMemberId = filter_var($newMemberId, FILTER_VALIDATE_INT);
+		if($newMemberId === false) {
+			throw(new InvalidArgumentException("member id is not a valid integer"));
+		}
+		// verify the member id is positive
+		if($newMemberId <= 0) {
+			throw(new RangeException("member id is not positive"));
+		}
+		// convert and store the member id
+		$this->memberId = intval($newMemberId);
+	}
+
+
+	/**
 	 * accessor method for birthday
 	 *
 	 * @return datetime value of birthday
 	 **/
 	public function getBirthday() {
 		return $this->birthday;
+	}
+
+	/**
+	 * mutator method for birthday
+	 *
+	 * @param mixed #newBirthdaydate as a DateTime object or string (or null to load the user's birthday)
+	 * @throws InvalidArgumentException if $newBirthday is not a valid object or string
+	 * @throws RangeException if $newBirthday is a date that is not over 18 years old.
+	 * @throws RangeException if $newBirthday is a date that does not exist
+	 **/
+	public function set($newBirthday) {
+		// base case: if the date is null, throw exception that birthday can not be blank.
+		if($newBirthday === null) {
+			$this->birthday = new birthday();
+			return;
+		}
+
+		// store the tweet date
+		try {
+			$newBirthday = validateDate($newBirthday);
+		} catch(InvalidArgumentException $invalidArgument) {
+			throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+		} catch(RangeException $range) {
+			throw(new RangeException($range->getMessage(), 0, $range));
+		}
+		$this->birthday = $newBirthday;
 	}
 
 	/**
@@ -111,4 +160,10 @@ class Member {
 		return $this->password;
 	}
 
+
+
+
+	public function setBirthday($newBirthday) {
+
+	}
 }
