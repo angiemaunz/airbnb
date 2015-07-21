@@ -91,6 +91,7 @@
 					<h4>DROP TABLE IF EXISTS listing;</h4>
 					<h4>DROP TABLE IF EXISTS member;</h4>
 					<hr>
+					<h6>note: fields in tables are not correct camel case... my lazy bad.</h6>
 					<hr>
 						<img src="images/airbnbtables.png" alt="mysql member table">
 					<hr>
@@ -103,16 +104,24 @@
 							<p>listingID INT NOT NULL,</p>
 							<p>dateWanted DATETIME NOT NULL,</p>
 							<p>PRIMARY KEY(reservationId),</p>
-							<p><INDEX ,</p>
+							<p>INDEX ,</p>
 							<p>FOREIGN KEY(userID) REFERENCES(member),</p>
 							<p>FOREIGN KEY(listingID) REFERENCES(listing)</p>
 							<p>);</p>
 				</div>
 </div>
+			<div class="oop>">
+
+				class Member {
+
+
+
+
+			</div>
 
 
 </div>
-
+		<h6>copyright & Angie 2015</h6>
 
 	</body>
 </html>
