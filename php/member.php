@@ -97,14 +97,12 @@ class Member {
 	 * @throws RangeException if $newBirthday is a date that is not over 18 years old.
 	 * @throws RangeException if $newBirthday is a date that does not exist
 	 **/
-	public function set($newBirthday) {
-		// base case: if the date is null, throw exception that birthday can not be blank.
-		if($newBirthday === null) {
-			$this->birthday = new birthday();
-			return;
-		}
+	public function setBirthdayAttributes()
+	{
+		return $this->attributes['year', 'month', 'day'] = date('Y-m-d', Input::get('year') . '-' . Input::get('month') . '-' . Input::get('day'));
+  }
 
-		// store the tweet date
+		// store the birth date
 		try {
 			$newBirthday = validateDate($newBirthday);
 		} catch(InvalidArgumentException $invalidArgument) {
@@ -124,6 +122,25 @@ class Member {
 		return $this->email;
 	}
 
+
+	/**
+	 * mutator method for email
+	 *
+	 * @param string $newEmail new value of email
+	 * @throws InvalidArgumentException if $newEmail is not a string
+	 * @throws InvalidArgumentException if $newEmail is not valid
+	 **/
+	public function setEmail($newEmail) {
+		// verify the email is valid
+		$newEmail = trim($newEmail);
+		if(trim(email) != "") { // some validation here
+			$newEmail = filter_var($newEmail, FILTER_SANITIZE_STRING);
+			if(empty($newEmail) === true) {
+				throw(new InvalidArgumentException("a valid email is required"));
+			}
+		}
+	}
+
 	/**
 	 * accessor method for first name
 	 *
@@ -133,6 +150,21 @@ class Member {
 		return $this->firstName;
 	}
 
+		//mutator method
+
+		public function setFirstName($firstName) {
+
+			if(trim($firstName) != "") { // some validation here
+
+				$this->firstName = $firstName;
+				return true;
+
+			}
+
+			else {
+				return false;
+			}
+
 	/**
 	 * accessor method for last name
 	 *
@@ -140,9 +172,28 @@ class Member {
 	 **/
 	public function getLastName() {
 		return $this->lastName;
-	}
 
-	/**
+
+		//mutator method
+
+		public function setLastName($lastName) {
+
+			if(trim($firstName) != "") { // some validation here
+
+				$this->firstName = $firstName;
+
+				return true;
+
+			}
+
+			else {
+
+				return false;
+
+			}
+
+
+			/**
 	 * accessor method for login name
 	 *
 	 * @return string value of login name
