@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>AirBnB Data Design Project</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="nav">
+
+			<ul>
+				<p><li><a href="index.html">Home</a></li></p>
+			</ul>
+
+
+		</div>
+
+
+		<div class="bottom_content">
+			<div class="diagram">
+				<img src="images/data_design_project_p2a.png" alt="data design layout">
+			</div>
+
+
+			<div class="sql">
+				<h4>DROP TABLE IF EXISTS reservation;</h4>
+				<h4>DROP TABLE IF EXISTS listing;</h4>
+				<h4>DROP TABLE IF EXISTS member;</h4>
+				<hr>
+				<h6>note: fields in tables are not correct camel case... my lazy bad.</h6>
+				<hr>
+				<img src="images/airbnbtables.png" alt="mysql member table">
+				<hr>
+
+				<hr>
+
+				<h4>CREATE TABLE reservation (</h4>
+				<p>reservationID INT AUTO_INCREMENT UNSIGNED NOT NULL,</p>
+				<p>userID INT NOT NULL,</p>
+				<p>listingID INT NOT NULL,</p>
+				<p>dateWanted DATETIME NOT NULL,</p>
+				<p>PRIMARY KEY(reservationId),</p>
+				<p>INDEX ,</p>
+				<p>FOREIGN KEY(userID) REFERENCES(member),</p>
+				<p>FOREIGN KEY(listingID) REFERENCES(listing)</p>
+				<p>);</p>
+			</div>
+		</div>
+		<div class="oop>">
+
+			class Member {
+
+
+
+
+		</div>
+
+
+
+	</body>
+</html>

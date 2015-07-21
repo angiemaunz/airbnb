@@ -28,6 +28,13 @@ h3 {
 h4, h5, h6 {
 	color: #fff;
 }
+nav {
+	border: solid 1px #ff0000;
+	color: #fff;
+	display: inline;
+}
+
+
 
 .persona {
 	clear: both;

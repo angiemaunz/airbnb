@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 	<head lang="en">
 		<meta charset="UTF-8">
 		<title>AirBnB Data Design Project</title>
@@ -10,6 +10,12 @@
 		<div class="header">
 			<h1>AirBnB Data Design Project</h1>
 		</div>
+
+		<nav>
+			<ul>
+				<p><li><a href="phase2.html">Use Cases</a></li></p>
+			</ul>
+		</nav>
 
 		<div class="container">
 
@@ -28,6 +34,8 @@
 				<li>travels locally to visit kids and community events</li>
 				</ul>
 			</div>
+			<hr>
+			<hr>
 
 			<div class="uses">
 				<h1>Use Cases</h1>
@@ -64,12 +72,19 @@
 					<ol><li>login to their account.</li>
 						<li>click the dropdown arrow to the right of their profile picture in top right hand corner of their home page.</li>
 						<li>From the dropdown list, select “Your Reservations”.</li>
+							<ul>
+								<li>From this page, you will have 3 option links:</li>
+								<li>Your Listing</li>
+								<li>Your Reservations</li>
+								<li>Reservation Requirements</li>
+							</ul>
+						<li>Click the "Your Reservations link for your upcoming reservations.</li>
 					</ol>
 			</div>
 
 			<div class="user">
 				<h3>Goal:</h3>
-				<p>A user needs to find out how to cancel an existing booking.</p>
+				<p>A user needs to find out how to change or cancel an existing booking.</p>
 			</div>
 
 			<div class="steps">
@@ -78,50 +93,18 @@
 						<li>Login into their airbnb hosting account</li>
 						<li>Click on the dropdown arrow beside “help” in upper right hand corner.</li>
 						<li>From the dropdown menu, select “How do I cancel a reservation as a host?</li>
+
+
+				<h5>To request changes to your reservation as a host:</h5>
+
+					<li>Click your name at the top of airbnb.com</li>
+					<li>Select Your Reservations</li>
+					<li>Next to the reservation you want to change, click Alter or Cancel</li>
 					</ol>
-			</div>
-<div class="bottom_content">
-			<div class="diagram">
-				<img src="images/data_design_project_p2a.png" alt="data design layout">
-			</div>
-
-
-				<div class="sql">
-					<h4>DROP TABLE IF EXISTS reservation;</h4>
-					<h4>DROP TABLE IF EXISTS listing;</h4>
-					<h4>DROP TABLE IF EXISTS member;</h4>
-					<hr>
-					<h6>note: fields in tables are not correct camel case... my lazy bad.</h6>
-					<hr>
-						<img src="images/airbnbtables.png" alt="mysql member table">
-					<hr>
-
-					<hr>
-
-							<h4>CREATE TABLE reservation (</h4>
-							<p>reservationID INT AUTO_INCREMENT UNSIGNED NOT NULL,</p>
-							<p>userID INT NOT NULL,</p>
-							<p>listingID INT NOT NULL,</p>
-							<p>dateWanted DATETIME NOT NULL,</p>
-							<p>PRIMARY KEY(reservationId),</p>
-							<p>INDEX ,</p>
-							<p>FOREIGN KEY(userID) REFERENCES(member),</p>
-							<p>FOREIGN KEY(listingID) REFERENCES(listing)</p>
-							<p>);</p>
-				</div>
-</div>
-			<div class="oop>">
-
-				class Member {
-
-
-
-
-			</div>
 
 
 </div>
-		<h6>copyright & Angie 2015</h6>
+		<h6>copyright #169 Angie 2015</h6>
 
 	</body>
 </html>
