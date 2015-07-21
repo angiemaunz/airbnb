@@ -1,12 +1,10 @@
 <?php
 
 
-
-require 'test.php';
 require 'member.php';
 
-$angie = new Test();
-*$jeff = new Member();
+/*$angie = new Test();
+$jeff = new Member();
 
 $angie->email = 'angie@example.com';
 
@@ -25,5 +23,10 @@ var_dump($angie);
 var_dump($jeff->login());
 var_dump($angie->logout());*/
 
+$angie = new Member();
+$jeff = new Member();
+
 $angie->setPassword('jjou');
 $jeff->setPassword('jjou');
+
+var_dump($angie);
