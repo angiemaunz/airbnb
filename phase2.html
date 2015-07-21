@@ -9,7 +9,8 @@
 
 		<nav>
 			<ul>
-				<li><a href=""index.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="phase2.html">Use Cases</a></li>
 			</ul>
 		</nav>
 
@@ -37,7 +38,7 @@
 				<p>listingID INT NOT NULL,</p>
 				<p>dateWanted DATETIME NOT NULL,</p>
 				<p>PRIMARY KEY(reservationId),</p>
-				<p>INDEX ,</p>
+				<p>INDEX (userID) REFERENCE(member),</p>
 				<p>FOREIGN KEY(userID) REFERENCES(member),</p>
 				<p>FOREIGN KEY(listingID) REFERENCES(listing)</p>
 				<p>);</p>
